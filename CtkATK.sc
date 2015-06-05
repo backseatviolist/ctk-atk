@@ -23,12 +23,9 @@
 //	This file is a bridge between the SuperCollider3 version of the Ambisonic Toolkit
 //	(ATK) and the Composer's Toolkit (CTK).
 //
-//	ATK and CTK get along fine except except for kernel convolution. ATK uses the
-//	standard Buffer object, which requires you to boot a server with the correct
-//	sample rate and convert all the kernel buffers into CtkBuffers. The sample rate
-//	requirement is especially painful because in many cases it requires us to set
-//	the JACK server to the correct SR, even though this is unnecessary for NRT
-//	synthesis.
+//	ATK and CTK get along fine except for kernel convolution. ATK uses the
+//	standard Buffer object, which requires you to boot a server and convert all
+//	the kernel buffers into CtkBuffers.
 //
 //	These are alternatives to FoaEncoderKernel and FoaDecoderKernel that bypass
 //	this issue by using CtkBuffers.
