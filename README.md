@@ -9,6 +9,8 @@ Sample:
     score.add(sndbuf);
     encoder = CtkFoaEncoderKernel.newUHJ(sampleRate: sampleRate);
     decoder = CtkFoaDecoderKernel.newListen(1013, sampleRate: sampleRate);
+    score.add(encoder);
+    score.add(decoder);
     sd = CtkSynthDef(\kernelEncodeDecode, {arg buffer;
         var out, src, encode;
         src = PlayBuf.ar(2, buffer);
